@@ -1,0 +1,7 @@
+<div class="object-selector">
+  <h2>Объекты</h2>
+  <input class="filter-input" type="text" (input)="onFilterChange($event)" [value]="filter" placeholder="Газель">
+  <button *ngFor="let point of filteredPoints" [ngClass]="{'selected': point.selected}" (click)="selectPoint(point)" class="object">
+    {{point.name}}
+  </button>
+</div>

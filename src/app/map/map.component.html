@@ -1,0 +1,11 @@
+<div class="map-container"
+     leaflet
+     [leafletOptions]="options"
+     (leafletMapReady)="onMapReady($event)"
+>
+  <div *ngFor="let point of points"
+       [leafletLayer]="createMarker(point)"
+  ></div>
+</div>
+<app-object-selector [points]="points" (objectSelect)="onObjectSelect($event)"/>
+
