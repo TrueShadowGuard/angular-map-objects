@@ -24,7 +24,7 @@ export class MapComponent {
   points = points;
   map !: LMap;
   createMarker(point: Point) {
-    const m = marker([point.latitude, point.longitude]);
+    const m = marker([point.latitude, point.longitude], {icon: redIcon});
     m.bindTooltip(point.name, {permanent: true}).openPopup();
     return m;
   }
